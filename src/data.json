@@ -9,7 +9,7 @@
 },{
     "id": 3,
     "task": "Take out the trash",
-    "completed": false
+    "completed": true
 },{
     "id": 4,
     "task": "Clean the house",
