@@ -2,7 +2,7 @@ import React from 'react'
 //import App.css
 import '../App.css';
 
-function TaskItem({task}) {
+function TaskItem({task, OnComplete, OnDeleteTask}) {
 
     const getStyle = () => {
         return {
@@ -15,8 +15,9 @@ function TaskItem({task}) {
 
   return (
     <div style = {getStyle()}>
+        <input type='checkbox' checked={task.completed} onChange = {() => OnComplete(task.id)}/>
         {task.task}
-        <button className='add-btn'>X</button>
+        <button className='add-btn' onClick={() =>OnDeleteTask(task.id)}>X</button>
     </div>
   )
 }
